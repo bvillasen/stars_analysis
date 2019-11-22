@@ -15,20 +15,21 @@ from load_data_cholla import load_snapshot_cholla
 dataDir = '/raid/bruno/data/stars/polytrope/'
 inputDir = dataDir + 'snapshots/' 
 
-n_snapshot = 0
+n_snapshots = 11
 
-data = load_snapshot_cholla( n_snapshot, inputDir )
+for n_snapshot in range( n_snapshots ):
+  data = load_snapshot_cholla( n_snapshot, inputDir )
 
-dens = data['gas']['density'][...]
-nz, ny, nx = dens.shape
-indx_slice = nz/2
-dens_slice = dens[indx_slice, :, : ]
+  dens = data['gas']['density'][...]
+  nz, ny, nx = dens.shape
+  indx_slice = nz/2
+  dens_slice = dens[indx_slice, :, : ]
 
-fig, ax = plt.subplots()
+  fig, ax = plt.subplots()
 
-fig.set_size_inches( 10, 8 )
-im = ax.imshow( dens_slice )
-plt.colorbar(im)
-plt.savefig( figuresDirectory + 'polytropes_2D_cholla.png')
-
+  fig.set_size_inches( 10, 8 )
+  im = ax.imshow( dens_slice )
+  plt.colorbar(im)
+  plt.savefig( figuresDirectory + 'dens_cholla_{0}.png'.format(n_snapshot))
+# 
 
