@@ -14,7 +14,7 @@ from load_data_cholla import load_snapshot_cholla
 from tools import create_directory
 
 dataDir = '/data/groups/comp-astro/bruno/stars/polytrope/'
-inputDir = dataDir + 'output_files/grav_0./'
+inputDir = dataDir + 'output_files/grav_0/'
 outputDir = figuresDirectory + 'grav_0./'
 create_directory( outputDir )
 
