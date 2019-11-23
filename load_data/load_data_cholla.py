@@ -6,8 +6,9 @@ import numpy as np
 
 
 
-def load_snapshot_cholla( nSnap, inDir,   ):
+def load_snapshot_cholla( nSnap, inDir, single_file=False  ):
   gridFileName = inDir + 'grid_{0:03}.h5'.format(nSnap)
+  if single_file: gridFileName = '{0}.h5'.format(nSnap)
   
   outDir = { 'gas':{} }
   

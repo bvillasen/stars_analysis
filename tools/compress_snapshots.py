@@ -13,7 +13,7 @@ import time
 
 dataDir = '/raid/bruno/data/stars/polytrope/'
 inDir = dataDir + 'output_files/'
-outDir = dataDir + 'snapshots/'
+outDir = dataDir + 'snapshots/grav_0./'
 
 
 
@@ -50,9 +50,9 @@ snapshots_to_compress = range( nSnapshots )
 print( "\nNumber of snapshots to compres: {0}".format(len(snapshots_to_compress)) )
 
 #available Hydro Fields:
-#[ density, momentum_x, momentum_y, momentum_z, Enegy, GasEnergy ]
+#[ density, momentum_x, momentum_y, momentum_z, Energy, GasEnergy ]
 # hydro_fields = 'all'
-hydro_fields = ['density' ]
+hydro_fields = ['density', 'momentum_x', 'momentum_y', 'momentum_z', 'Energy' ]
 print( "\nHydro fields: {0}".format(hydro_fields))
 
 
