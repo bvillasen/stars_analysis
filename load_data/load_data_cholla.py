@@ -14,7 +14,10 @@ def load_snapshot_cholla( nSnap, inDir, single_file=False  ):
   
   data_grid = h5.File( gridFileName, 'r' )
   fields_data = data_grid.keys()
-  for key in data_grid.attrs.keys(): outDir[key] = data_grid.attrs[key]
+  if single_file: 
+    for key in data_grid.attrs.keys(): outDir[key] = data_grid.attrs[key][0]
+  else: 
+    for key in data_grid.attrs.keys(): outDir[key] = data_grid.attrs[key]
   fields_grid = fields_data
   for field in fields_grid:
     if field not in fields_data: continue
