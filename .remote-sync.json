@@ -5,14 +5,14 @@
   "uploadOnSave": true,
   "useAtomicWrites": false,
   "deleteLocal": false,
-  "hostname": "lux.ucsc.edu",
+  "hostname": "shamrock.ucsc.edu",
   "port": "22",
-  "target": "/data/groups/comp-astro/bruno/stars/stars_analysis",
+  "target": "/home/bruno/Desktop/Dropbox/Developer/stars_analysis/",
   "ignore": [
     ".remote-sync.json",
     ".git/**"
   ],
-  "username": "brvillas",
+  "username": "bruno",
   "watch": [],
   "useAgent": true,
   "transport": "scp"

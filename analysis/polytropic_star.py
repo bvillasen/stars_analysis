@@ -15,9 +15,10 @@ from polytrope_functions import Solve_Polytropic_Star
 from load_data_cholla import load_snapshot_cholla
 from tools import create_directory
 
-dataDir = '/data/groups/comp-astro/bruno/stars/polytrope/'
-inputDir = dataDir + 'output_files/grav_0.5/'
-outputDir = figuresDirectory + 'grav_0.5/'
+dataDir = '/raid/bruno/data/stars/polytrope/'
+# dataDir = '/data/groups/comp-astro/bruno/stars/polytrope/'
+inputDir = dataDir + 'snapshots/grav_0./'
+outputDir = figuresDirectory + 'grav_1./'
 create_directory( outputDir )
 
 n_poly = 1.5
@@ -40,11 +41,11 @@ dens_poly = np.concatenate([ density_vals[::-1], density_vals ])
  
  
 
-n_snapshots = 11
+n_snapshots = 91
 n_snapshot = 0
 for n_snapshot in range( n_snapshots ):
   print 'nSnapshot: {0}'.format( n_snapshot )
-  data = load_snapshot_cholla( n_snapshot, inputDir, single_file=True )
+  data = load_snapshot_cholla( n_snapshot, inputDir, single_file=False )
   t = data['t']
   gamma = data['gamma']
 

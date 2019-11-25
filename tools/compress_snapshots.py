@@ -7,14 +7,14 @@ import numpy as np
 import time
 
 
-# dataDir = '/data/groups/comp-astro/bruno/data/1024_cool_uv_50Mpc/'
-# inDir = dataDir + 'out_files/'
-# outDir = dataDir + 'snapshots/'
+dataDir = '/data/groups/comp-astro/bruno/data/1024_cool_uv_50Mpc/'
+inDir = dataDir + 'out_files/'
+outDir = dataDir + 'snapshots/'
 
-dataDir = '/raid/bruno/data/stars/polytrope/'
-inDir = dataDir + 'output_files/'
-outDir = dataDir + 'snapshots/grav_0./'
-
+# dataDir = '/raid/bruno/data/stars/polytrope/'
+# inDir = dataDir + 'output_files/'
+# outDir = dataDir + 'snapshots/grav_0./'
+# 
 
 
 
