@@ -44,7 +44,7 @@ dens_poly = np.concatenate([ density_vals[::-1], density_vals ])
 n_snapshots = 91
 n_snapshot = 0
 for n_snapshot in range( n_snapshots ):
-  print 'nSnapshot: {0}'.format( n_snapshot )
+  print('nSnapshot: {0}'.format( n_snapshot ))
   data = load_snapshot_cholla( n_snapshot, inputDir, single_file=False )
   t = data['t']
   gamma = data['gamma']
